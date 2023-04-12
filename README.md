@@ -1,4 +1,4 @@
-# JudgerAI
+# JudgerAI | Your Dream's Legal AI Assistant
 Introducing JudgerAI - the revolutionary NLP application that predicts legal judgments with stunning accuracy! Say goodbye to the guesswork of legal decision-making and hello to unparalleled efficiency and precision. JudgerAI uses advanced natural language processing algorithms to analyze past cases, legal precedents, and relevant data to provide accurate predictions of future legal outcomes. With JudgerAI, legal professionals can make informed decisions, save time, and improve their success rates. Trust in the power of AI and let JudgerAI lead the way to a smarter, more efficient legal system.
 
 Natural Language Processing (NLP) has been increasingly used in the legal field for various tasks, including predicting the outcomes of legal judgments. Legal judgment prediction involves analyzing and predicting the outcome of a legal case based on the language used in the legal documents.
