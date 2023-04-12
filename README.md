@@ -10,7 +10,7 @@ One of the main challenges in legal judgment prediction using NLP is the complex
 Despite these challenges, NLP has shown promising results in legal judgment prediction. Researchers have used NLP techniques such as machine learning and deep learning to analyze legal language and predict the outcomes of legal cases with high accuracy. These techniques involve training NLP models on large datasets of legal cases and using them to predict the outcome of new cases based on the language used in the documents.
 
 # Dataset
-The Dataset consists of **3464** legal cases in a variety of fields, the key features of the dataset is the `first_party`, `second_party`, and `facts`. here is a quick look on the dataset structure:
+The Dataset consists of **3464** legal cases in a variety of fields, the key features of the dataset is the `first_party`, `second_party`, `winner_index`, and `facts`. here is a quick look on the dataset structure:
 
 | column | datatype | description |
 | ---    | ---      | ---         |
@@ -23,4 +23,27 @@ The Dataset consists of **3464** legal cases in a variety of fields, the key fea
 | winner_index     | int64    | Defines the winning index of a case, 0 => the first party wins, 1 => the second party wins |
 | facts     | string    | Contains the case facts that needed to determine who is the winner of specific case |
 
+The input of **JudgerAI** models will be the case `facts`, and the target will be the `winner_index`.
+
+# Experiments
+To achieve the best results, we tried different experiments in **JudgerAI** to see each experiment's effect on the final accuracy of **JudgerAI** models, here is a list of 3 experiments that were taken into consideration:
+- Data Preprocessing:
+  Including removing stopwords, lowercasing all letters, stemming, removing non-alphabet characters including braces, punctuation, and digits.
+- Data Anonymization:
+  Replacing parties' names from the case facts with a generic `_PARTY_` tag to make sure that models are not biased towards parties' names.
+- Label Class Imbalance:
+  Dealing with class imbalance as a standalone preprocessing step to see if there was an impact on the final accuracy of the **JudgerAI** models or not.
+
+
+Each experiment of the above 3, can be made or not, so, we ended up with 8 (2 to the power of 3) possible combinations and they were:
+1. No preprocessing - No anonymization - Imbalance
+2. No preprocessing - No anonymization - Balanced
+3. No preprocessing - Anonymization - Imbalance
+4. No preprocessing - Anonymization - Balanced
+5. Preprocessing - No anonymization - Imbalance
+6. Preprocessing - No anonymization - Balanced
+7. Preprocessing - Anonymization - Imbalance
+8. Preprocessing - Anonymization - Balanced
+
+As a result, we will end up with 8 different results representing the effect of each expeirment on the final model's decision.
 
