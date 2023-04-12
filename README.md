@@ -25,6 +25,15 @@ The Dataset consists of **3464** legal cases in a variety of fields, the key fea
 
 The input of **JudgerAI** models will be the case `facts`, and the target will be the `winner_index`.
 
+# Modules
+For organizational purposes, we divide the code base across 3 modules: `preprocessing`, `plotting`, and `utils`.
+1. **preprocessing module**:
+`preprocessing` module contains `Preprocessor` class which is responsible for all kind of preprocessing on the case facts such as tokenization, converting case facts to vectors using different techniques, balancing data, anonymize facts, preprocess facts, etc. **balancing - anonymization - prerprocessing** are coverd in **Experiments** section.
+2. **plotting module**:
+`plotting` module contains `PlottingManager` class which is responsible for all plotting & visualizations of **JudgerAI** models' performance measures including losses and accuracies curves, detailed losses and accuracies heatmaps, ROC-AUC curves, classification reports, and confusion metrics.
+3. **utils module**:
+`utils` module contains several useful functions that will be re-used in various models: `train_model()` function that uses k-fold cross-validatiob form training specific model, `print_testing_loss_accuracy()` that summarizes testing loss and testing accuracy for each fold, `calculate_average_measure()` which is used for calculating average of the passed `measure` which can be loss, val_loss, accuracy, or val_accuracy.
+
 # Experiments
 To achieve the best results, we tried different experiments in **JudgerAI** to see each experiment's effect on the final accuracy of **JudgerAI** models, here is a list of 3 experiments that were taken into consideration:
 - Data Preprocessing:
