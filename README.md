@@ -106,7 +106,7 @@ A quick overview of the training methodology, first we divided the dataset into 
 **An important** part to mention here is that these 4 testing accuracies will be per combination. Let me clarify this by considering the `Doc2Vec` model, first, we set up our eight combinations, then in each combination, we trained a `Doc2Vec` model with 4-fold cross-validation, so, we ended up with 32 (8 x 4) testing accuracies, then, we will choose the best combination and the best fold that can generalize well on the testing data and save it for later use.
 
 Here is an illustration of the training processs per combination:
-
+![alt text](training.png)
 # Final Steps
 After training the above 5 models and saving best model's combination that performs well on the testing set, we have made a simple step of **ensemble learning** between models to give the most accurate prediction, and this was done by simply use **voting** between models on the winner of a specific case.
 
