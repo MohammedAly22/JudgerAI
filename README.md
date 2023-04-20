@@ -104,9 +104,6 @@ As a result, we will end up with 8 different results representing the effect of 
 A quick overview of the training methodology, first we divided the dataset into training and testing parts with a proportion of 80:20 and this division will be constant for all of JudgerAI's models to test all models on the same test set to make the results comparable. Therefore the training data was divided into 4 parts or more specifically 4 folds each fold is 20% of the data that we used to train JudgerAI's models using 4-fold cross-validation. So we ended up with 4 testing accuracies representing the performance of each fold on the testing data. 
 
 **An important** part to mention here is that these 4 testing accuracies will be per combination. Let me clarify this by considering the `Doc2Vec` model, first, we set up our eight combinations, then in each combination, we trained a `Doc2Vec` model with 4-fold cross-validation, so, we ended up with 32 (8 x 4) testing accuracies, then, we will choose the best combination and the best fold that can generalize well on the testing data and save it for later use.
-
-Here is an illustration of the training processs per combination:
-![alt text](training.png)
 # Final Steps
 After training the above 5 models and saving best model's combination that performs well on the testing set, we have made a simple step of **ensemble learning** between models to give the most accurate prediction, and this was done by simply use **voting** between models on the winner of a specific case.
 
