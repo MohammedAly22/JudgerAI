@@ -27,11 +27,11 @@ The input of **JudgerAI** models will be the case `facts`, and the target will b
 
 # Modules
 For organizational purposes, we divide the code base across 3 modules: `preprocessing`, `plotting`, and `utils`.
-1. **preprocessing module**:
+1. [**preprocessing module**](https://github.com/MohammedAly22/JudgerAI/blob/main/modules/preprocessing.py):
 `preprocessing` module contains `Preprocessor` class which is responsible for all kind of preprocessing on the case facts such as tokenization, converting case facts to vectors using different techniques, balancing data, anonymize facts, preprocess facts, etc. **balancing - anonymization - prerprocessing** are coverd in **Experiments** section.
-2. **plotting module**:
+2. [**plotting module**](https://github.com/MohammedAly22/JudgerAI/blob/main/modules/plotting.py):
 `plotting` module contains `PlottingManager` class which is responsible for all plotting & visualizations of **JudgerAI** models' performance measures including losses and accuracies curves, detailed losses and accuracies heatmaps, ROC-AUC curves, classification reports, and confusion metrics.
-3. **utils module**:
+3. [**utils module**](https://github.com/MohammedAly22/JudgerAI/blob/main/modules/utils.py):
 `utils` module contains several useful functions that will be re-used in various models: `train_model()` function that uses k-fold cross-validation for training a specific model, `print_testing_loss_accuracy()` that summarizes testing loss and testing accuracy for each fold, `calculate_average_measure()` which is used for calculating average of the passed `measure` which can be loss, val_loss, accuracy, or val_accuracy.
 
 # Models
