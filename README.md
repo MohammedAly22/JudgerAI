@@ -105,7 +105,7 @@ A quick overview of the training methodology, first we divided the dataset into 
 
 Here is an illustartion graph for training methodology:
 
-![alt text](graph.jpg)
+![alt text](training-graph.jpg)
 
 **An important** part to mention here is that these 4 testing accuracies will be per combination. Let me clarify this by considering the `Doc2Vec` model, first, we set up our eight combinations, then in each combination, we trained a `Doc2Vec` model with 4-fold cross-validation, so, we ended up with 32 (8 x 4) testing accuracies, then, we will choose the best combination and the best fold that can generalize well on the testing data and save it for later use.
 
