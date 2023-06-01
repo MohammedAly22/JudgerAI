@@ -101,7 +101,7 @@ Each experiment of the above 3, can be made or not, so, we ended up with 8 (2 to
 As a result, we will end up with 8 different results representing the effect of each expeirment on the final model's decision.
 
 # Training
-A quick overview of the training methodology, first we divided the dataset into training and testing parts with a proportion of 80:20 and this division will be constant for all of JudgerAI's models to test all models on the same test set to make the results comparable. Therefore the training data was divided into 4 parts or more specifically 4 folds each fold is 20% of the data that we used to train JudgerAI's models using 4-fold cross-validation. So we ended up with 4 testing accuracies representing the performance of each fold on the testing data. 
+A quick overview of the training methodology, first we divided the dataset into training and testing parts with a proportion of 80:20 and this division will be constant for all of JudgerAI's models to test all models on the same test set to make the results comparable. Therefore, the training data was divided into 4 parts or more specifically 4 folds each fold is 25% of the data that we used to train JudgerAI's models using 4-fold cross-validation. So we ended up with 4 testing accuracies representing the performance of each fold on the testing data. 
 
 Here is an illustartion graph for training methodology:
 
