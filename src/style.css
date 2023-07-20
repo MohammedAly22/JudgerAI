@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Cairo', sans-serif !important;
+}
+
+/* title */
+.e16nr0p30 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+/* buttons */
+.edgvbvh10,
+.edgvbvh5 {
+    width: 100%;
+    height: 40px;
+    background-color: #4756ff;
+    color: #fff;
+    transition: 0.4s;
+    border: none;
+}
+
+.edgvbvh10:hover,
+.edgvbvh5:hover {
+    background-color: #3747fd;
+    color: #fff;
+    border: none;
+}
+
+.edgvbvh10:focus,
+.edgvbvh5:focus {
+    background-color: #3747fd;
+    color: #fff !important;
+    box-shadow: none;
+    border: none;
+}
+
+/* header */
+.row_heading {
+    font-size: 14px;
+}
+
+/* spinner */
+.css-1y04v0k.e17lx80j1,
+.css-p6380s.e17lx80j1 {
+    margin: 0px;
+    border-color: #34e27f #b3b3b333 #cacaca33 !important;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+/* inputs styling */
+.st-bf {
+    transition: 0.8s;
+    border: none !important;
+}
+
+.st-bf:hover {
+    box-shadow: 0 0 0 4px #dbdbdb !important;
+}
+
+/* text stylings */
+.highlight-petitioner {
+    border-radius: 0.4rem;
+    background-color: rgba(253, 231, 142, 0.4);
+    color: #ffd061;
+    padding: 1px 5px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.highlight-respondent {
+    border-radius: 0.4rem;
+    background-color: rgba(78, 170, 255, 0.2);
+    color: #6195ff;
+    padding: 1px 5px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.bold-text {
+    font-weight: 700 !important;
+}
+
+.text-facts {
+    line-height: 40px;
+}
+
+/* footer */
+footer {
+    display: none !important;
+}
