@@ -3,7 +3,7 @@ Introducing **JudgerAI** - the revolutionary NLP application that predicts legal
 
 Natural Language Processing (NLP) has been increasingly used in the legal field for various tasks, including predicting the outcomes of legal judgments. Legal judgment prediction involves analyzing and predicting the outcome of a legal case based on the language used in the legal documents.
 
-**JudgerAI** can be used to analyze the language of legal cases and predict the outcome of similar cases based on patterns and trends in the language. By using **JudgerAI**, legal professionals can save time and resources by identifying relevant cases and predicting their outcome, thereby making more informed decisions.
+**JudgerAI** can be used to analyze the language of legal cases and predict the outcome of similar cases based on patterns and trends in the language. By using **JudgerAI**, legal professionals can save time and resources by identifying relevant cases and predicting their outcomes, thereby making more informed decisions.
 
 One of the main challenges in legal judgment prediction using NLP is the complexity and variability of legal language. Legal documents often use technical terminology, jargon, and complex sentence structures that can be difficult for NLP models to analyze accurately. Additionally, legal cases can be influenced by various factors, including the specific circumstances of the case, the legal jurisdiction, and the judge's personal beliefs and biases.
 
@@ -120,4 +120,4 @@ Here is an illustration graph for training methodology:
 After training the above 5 models and saving the best model combination that performs well on the testing set, we have made a simple step of **ensemble learning** between models to give the most accurate prediction, and this was done by simply using **voting** between models on the winner of a specific case.
 
 # Additional
-For a more detailed explanation of **JudgerAI** and to see the results of its models in much more detail, please, go to the [documentation]() file to see a detailed explanation of the powerful legal assistant "JudgerAI", Thanks.
+For a more detailed explanation of **JudgerAI** and to see the results of its models in much more detail, please, go to each model's notebook to see a detailed explanation of the powerful legal assistant "JudgerAI", Thanks.
