@@ -84,6 +84,36 @@ The basic idea behind GloVe is to use co-occurrence statistics to learn word emb
 ## BERT
 **BERT (Bidirectional Encoder Representations from Transformers)** is a powerful pre-trained language model developed by researchers at Google, including Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. BERT was first introduced in a [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding, 2018](https://arxiv.org/abs/1810.04805), and since then has become one of the most widely used models in natural language processing. The basic idea behind BERT is to pre-train a deep neural network on a large corpus of text, and then fine-tune the model for specific NLP tasks such as question answering, sentiment analysis, and text classification. BERT is unique in that it uses a bidirectional transformer architecture, which allows it to capture the context and meaning of words within a sentence or paragraph.
 
+## Long Short-Term Memory (LSTM)
+LSTM (Long Short-Term Memory) is a type of recurrent neural network (RNN) architecture that is designed to overcome the limitations of traditional RNNs in capturing long-term dependencies in sequential data. It was first introduced by Sepp Hochreiter and Jürgen Schmidhuber in their paper titled ["Long Short-Term Memory": 1997](https://www.bioinf.jku.at/publications/older/2604.pdf)
+
+LSTM networks are particularly effective in tasks that involve sequential data, such as speech recognition, natural language processing, and time series analysis. They are capable of learning and remembering information over long sequences, making them well-suited for modeling and predicting patterns in sequential data.
+The key idea behind LSTM is the introduction of memory cells, which allow the network to selectively remember or forget information over time. Each LSTM unit consists of three main components: the input gate, the forget gate, and the output gate.
+
+1. Input Gate: The input gate determines how much of the new input should be stored in the memory cell. It takes into account the current input and the previous hidden state and produces an activation value between 0 and 1.
+
+2. Forget Gate: The forget gate controls the extent to which the previous memory cell should be forgotten. It considers the current input and the previous hidden state and decides which information to discard from the memory cell. The forget gate also produces an activation value between 0 and 1.
+
+3. Output Gate: The output gate determines the amount of information to be output from the memory cell. It considers the current input and the previous hidden state and produces an activation value between 0 and 1.
+
+The memory cell, which is the core component of LSTM, stores and updates information over time. It is responsible for maintaining the long-term memory of the network. The input gate, forget gate and output gate regulate the flow of information into, out of, and within the memory cell.
+LSTM networks have shown remarkable success in various applications, especially in tasks that involve long-term dependencies and sequential data. They have been widely adopted and have become a fundamental building block in many state-of-the-art deep learning models.
+
+## FastText
+FastText is a library and approach for efficient text classification and representation learning developed by Facebook AI Research. It was first introduced by Armand Joulin, Edouard Grave, Piotr Bojanowski, and Tomas Mikolov in their paper titled ["Bag of Tricks for Efficient Text Classification": 2016](https://arxiv.org/abs/1607.01759).
+
+FastText is an extension of the popular word embedding technique called Word2Vec. It represents words as continuous vectors in a high-dimensional space, capturing semantic and syntactic information. However, FastText goes beyond individual words and introduces a subword-level representation.
+The key idea behind FastText is to represent words as a bag of character n-grams, where n-grams are contiguous sequences of characters. By considering subword information, FastText can handle out-of-vocabulary words and capture morphological similarities between words.
+Here's a high-level overview of the FastText approach:
+
+1. Building the Vocabulary: FastText constructs a vocabulary by considering all unique words and character n-grams present in the training corpus.
+
+2. Computing Word Representations: Each word is represented as the sum of its character n-gram embeddings. The character n-gram embeddings are learned along with the word embeddings during the training process.
+
+3. Training the Classifier: FastText trains a linear classifier (such as logistic regression or softmax) on top of the word representations to perform text classification tasks. The classifier is trained using the hierarchical softmax or the negative sampling technique.
+
+FastText has gained popularity due to its efficiency and effectiveness in various natural language processing tasks, including text classification, sentiment analysis, and language identification. It has been widely adopted and has become a valuable tool for many researchers and practitioners in the field.
+
 # Experiments
 To achieve the best results, we tried different experiments in **JudgerAI** to see each experiment's effect on the final accuracy of **JudgerAI** models, here is a list of 3 experiments that were taken into consideration:
 - Data Preprocessing:
