@@ -11,28 +11,7 @@ Despite these challenges, NLP has shown promising results in legal judgment pred
 
 Here is a quick demo for **JudgerAI**:
 
-[![Video](https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltf83b9578c2cc8c82/6426d520c43e6b68f5bd82cc/GOAL_-_Blank_WEB_-_Facebook_-_2023-03-31T134149.308.png?auto=webp&format=pjpg&width=3840&quality=60)](https://youtu.be/ny-m9eb1-5c?si=7dB22OIxR0EUS6sY)
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-
-<body>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ny-m9eb1-5c?si=fSZhE8lZbzMny00p"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-    </iframe>
-</body>
-
-</html>
-
+https://github.com/MohammedAly22/JudgerAI/assets/90681796/5087808a-407e-4a08-a6a0-dfc5f8ceca4f
 
 
 # Dataset
