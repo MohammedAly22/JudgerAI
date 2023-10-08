@@ -10,10 +10,25 @@ One of the main challenges in legal judgment prediction using NLP is the complex
 Despite these challenges, NLP has shown promising results in legal judgment prediction. Researchers have used NLP techniques such as machine learning and deep learning to analyze legal language and predict the outcomes of legal cases with high accuracy. These techniques involve training NLP models on large datasets of legal cases and using them to predict the outcome of new cases based on the language used in the documents.
 
 Here is a quick demo for **JudgerAI**:
-[![Video](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://www.youtube.com/embed/Z7PExj_v-ZU)
 
+<!DOCTYPE html>
+<html lang="en">
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Z7PExj_v-ZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ny-m9eb1-5c?si=fSZhE8lZbzMny00p"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
+</body>
+
+</html>
+
 
 
 # Dataset
