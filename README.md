@@ -11,10 +11,7 @@ Despite these challenges, NLP has shown promising results in legal judgment pred
 
 Here is a quick demo for **JudgerAI**:
 
-
-
-https://github.com/MohammedAly22/JudgerAI/assets/90681796/dacdd8f1-44ad-4890-a5ed-4db5eed94a07
-
+https://github.com/MohammedAly22/JudgerAI/assets/90681796/b5702afd-64f7-4d17-b4bd-c1ad57262260
 
 
 # Dataset
