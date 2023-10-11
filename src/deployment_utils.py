@@ -1,5 +1,6 @@
 # global
 from typing import Tuple, List
+import re
 import numpy as np
 import pandas as pd
 
@@ -10,7 +11,7 @@ from keras.preprocessing.text import Tokenizer
 from gensim.models.doc2vec import Doc2Vec
 
 import transformers
-from transformers import BertTokenizer
+from transformers import pipeline, BertTokenizer
 
 import fasttext
 
@@ -26,15 +27,34 @@ X_train, X_test, y_train, y_test = read_data()
 preprocessor = Preprocessor()
 
 # load models
-doc2vec_model_embeddings = Doc2Vec.load("../models/best_doc2vec_embeddings")
-doc2vec_model = keras.models.load_model("../models/best_doc2vec_model.h5")
-tfidf_model = keras.models.load_model("../models/best_tfidf_model.h5")
-cnn_model = keras.models.load_model("../models/best_cnn_model.h5")
-glove_model = keras.models.load_model("../models/best_glove_model.h5")
-lstm_model = keras.models.load_model("../models/best_lstm_model.h5")
+doc2vec_model_embeddings = Doc2Vec.load(
+    "F:/Graduation Project/Project/models/best_doc2vec_embeddings")
+doc2vec_model = keras.models.load_model(
+    "F:/Graduation Project/Project/models/best_doc2vec_model.h5")
+tfidf_model = keras.models.load_model(
+    "F:/Graduation Project/Project/models/best_tfidf_model.h5")
+cnn_model = keras.models.load_model(
+    "F:/Graduation Project/Project/models/best_cnn_model.h5")
+glove_model = keras.models.load_model(
+    "F:/Graduation Project/Project/models/best_glove_model.h5")
+lstm_model = keras.models.load_model(
+    "F:/Graduation Project/Project/models/best_lstm_model.h5")
 bert_model = keras.models.load_model(
-    "../models/best_bert_model.h5", custom_objects={"TFBertModel": transformers.TFBertModel})
-fasttext_model = fasttext.load_model("../models/best_fasttext_model.bin")
+    "F:/Graduation Project/Project/models/best_bert_model.h5", custom_objects={"TFBertModel": transformers.TFBertModel})
+fasttext_model = fasttext.load_model(
+    "F:/Graduation Project/Project/models/best_fasttext_model.bin")
+summarization_model = pipeline(
+    "summarization", model="facebook/bart-large-cnn")
+
+
+def extract_case_information(case_content: str):
+    content_list = case_content.split("\n")
+    petitioner = re.findall(r"petitioner:(.+)", content_list[0])[0]
+    respondent = re.findall(r"respondent:(.+)", content_list[1])[0]
+    facts = re.findall(r"facts:(.+)", content_list[2])[0]
+
+    return petitioner, respondent, facts
+
 
 
 def generate_random_sample() -> Tuple[str, str, str, int]:
@@ -581,4 +601,7 @@ class Predictor:
             pet_res_scores.append(np.array([1 - temp, temp]))
 
         return np.array(pet_res_scores)
-        
+
+    def summarize_facts(self, facts: str) -> str:
+        summarized_case_facts = summarization_model(facts)[0]['summary_text']
+        return summarized_case_facts
