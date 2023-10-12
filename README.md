@@ -1,6 +1,26 @@
 # JudgerAI | Your Dream's Legal AI Assistant
 Introducing **JudgerAI** - the revolutionary NLP application that predicts legal judgments with stunning accuracy! Say goodbye to the guesswork of legal decision-making and hello to unparalleled efficiency and precision. **JudgerAI** uses advanced natural language processing algorithms to analyze past cases, legal precedents, and relevant data to provide accurate predictions of future legal outcomes. With **JudgerAI**, legal professionals can make informed decisions, save time, and improve their success rates. Trust in the power of AI and let **JudgerAI** lead the way to a smarter, more efficient legal system.
 
+**Table of Contents:**
+* [Introduction](#introduction)
+* [Demo](#demo)
+* [Installation](#installation)
+* [Dataset](#dataset)
+* [Modules](#modules)
+* [Models](#models)
+  * [Doc2Vec](#doc2vec)
+  * [1D-CNN](#1d-cnn)
+  * [TextVectorization with TF-IDF](#textvectorization-with-tf-idf)
+  * [GloVe](#glove)
+  * [BERT](#bert)
+  * [Long Short-Term Memory (LSTM)](#long-short-term-memory-lstm)
+  * [FastText](#fasttext)
+* [Experiments](#experiments)
+* [Training](#training)
+* [Final Steps](#final-steps)
+* [Additional](#additional)
+
+# Introduction
 Natural Language Processing (NLP) has been increasingly used in the legal field for various tasks, including predicting the outcomes of legal judgments. Legal judgment prediction involves analyzing and predicting the outcome of a legal case based on the language used in the legal documents.
 
 **JudgerAI** can be used to analyze the language of legal cases and predict the outcome of similar cases based on patterns and trends in the language. By using **JudgerAI**, legal professionals can save time and resources by identifying relevant cases and predicting their outcomes, thereby making more informed decisions.
@@ -9,10 +29,21 @@ One of the main challenges in legal judgment prediction using NLP is the complex
 
 Despite these challenges, NLP has shown promising results in legal judgment prediction. Researchers have used NLP techniques such as machine learning and deep learning to analyze legal language and predict the outcomes of legal cases with high accuracy. These techniques involve training NLP models on large datasets of legal cases and using them to predict the outcome of new cases based on the language used in the documents.
 
-Here is a quick demo for **JudgerAI**:
-
+# Demo
 https://github.com/MohammedAly22/JudgerAI/assets/90681796/b5702afd-64f7-4d17-b4bd-c1ad57262260
 
+# Installation:
+To run JudgerAI locally, follow these steps:
+
+1. Clone the repository:
+```
+git clone https://github.com/MohammedAly22/JudgerAI
+```
+
+2. Run the application:
+```
+streamlit run src/main.py
+```
 
 # Dataset
 The Dataset consists of **3464** legal cases in a variety of fields, the key features of the dataset are the `first_party`, `second_party`, `winner_index`, and `facts`. here is a quick look at the dataset structure:
@@ -81,28 +112,23 @@ In this example, the TextVectorization layer is created with a maximum vocabular
 ### TF-IDF:
 **TF-IDF** stands for Term Frequency-Inverse Document Frequency and is a popular technique in information retrieval and text mining for measuring the importance of words in a document or corpus. It was first introduced in ["A Statistical Interpretation of Term Specificity and Its Application in Retrieval, 1970s"](https://dl.acm.org/doi/10.1145/361219.361220). The basic idea behind TF-IDF is to give more weight to words that are frequent in a document but rare in the corpus as a whole. This is because such words are more likely to be important and informative about the content of the document.
 
-## GloVe
+## GloVe:
 **GloVe (Global Vectors for Word Representation)** is a popular unsupervised learning algorithm for generating word embeddings, which are vector representations of words that capture their semantic meaning. GloVe was developed by researchers at Stanford University, including Jeffrey Pennington, Richard Socher, and Christopher D. Manning, and was first introduced in [GloVe: Global Vectors for Word Representation, 2014](https://nlp.stanford.edu/pubs/glove.pdf). 
 
 The basic idea behind GloVe is to use co-occurrence statistics to learn word embeddings. The algorithm considers the co-occurrence statistics of words in a large corpus of text and uses them to learn vector representations of words that capture their semantic meaning. In particular, GloVe aims to learn word embeddings that preserve the relationships between words, such as synonymy and analogy.
 
-## BERT
+## BERT:
 **BERT (Bidirectional Encoder Representations from Transformers)** is a powerful pre-trained language model developed by researchers at Google, including Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. BERT was first introduced in a [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding, 2018](https://arxiv.org/abs/1810.04805), and since then has become one of the most widely used models in natural language processing. The basic idea behind BERT is to pre-train a deep neural network on a large corpus of text, and then fine-tune the model for specific NLP tasks such as question answering, sentiment analysis, and text classification. BERT is unique in that it uses a bidirectional transformer architecture, which allows it to capture the context and meaning of words within a sentence or paragraph.
 
-## Long Short-Term Memory (LSTM)
+## Long Short-Term Memory (LSTM):
 LSTM (Long Short-Term Memory) is a type of recurrent neural network (RNN) architecture that is designed to overcome the limitations of traditional RNNs in capturing long-term dependencies in sequential data. It was first introduced by Sepp Hochreiter and Jürgen Schmidhuber in their paper titled ["Long Short-Term Memory": 1997](https://www.bioinf.jku.at/publications/older/2604.pdf)
 
 LSTM networks are particularly effective in tasks that involve sequential data, such as speech recognition, natural language processing, and time series analysis. They are capable of learning and remembering information over long sequences, making them well-suited for modeling and predicting patterns in sequential data.
 The key idea behind LSTM is the introduction of memory cells, which allow the network to selectively remember or forget information over time. Each LSTM unit consists of three main components: the input gate, the forget gate, and the output gate.
 
 1. Input Gate: The input gate determines how much of the new input should be stored in the memory cell. It takes into account the current input and the previous hidden state and produces an activation value between 0 and 1.
-
 2. Forget Gate: The forget gate controls the extent to which the previous memory cell should be forgotten. It considers the current input and the previous hidden state and decides which information to discard from the memory cell. The forget gate also produces an activation value between 0 and 1.
-
 3. Output Gate: The output gate determines the amount of information to be output from the memory cell. It considers the current input and the previous hidden state and produces an activation value between 0 and 1.
-
-The memory cell, which is the core component of LSTM, stores and updates information over time. It is responsible for maintaining the long-term memory of the network. The input gate, forget gate and output gate regulate the flow of information into, out of, and within the memory cell.
-LSTM networks have shown remarkable success in various applications, especially in tasks that involve long-term dependencies and sequential data. They have been widely adopted and have become a fundamental building block in many state-of-the-art deep learning models.
 
 ## FastText
 FastText is a library and approach for efficient text classification and representation learning developed by Facebook AI Research. It was first introduced by Armand Joulin, Edouard Grave, Piotr Bojanowski, and Tomas Mikolov in their paper titled ["Bag of Tricks for Efficient Text Classification": 2016](https://arxiv.org/abs/1607.01759).
@@ -112,12 +138,8 @@ The key idea behind FastText is to represent words as a bag of character n-grams
 Here's a high-level overview of the FastText approach:
 
 1. Building the Vocabulary: FastText constructs a vocabulary by considering all unique words and character n-grams present in the training corpus.
-
 2. Computing Word Representations: Each word is represented as the sum of its character n-gram embeddings. The character n-gram embeddings are learned along with the word embeddings during the training process.
-
 3. Training the Classifier: FastText trains a linear classifier (such as logistic regression or softmax) on top of the word representations to perform text classification tasks. The classifier is trained using the hierarchical softmax or the negative sampling technique.
-
-FastText has gained popularity due to its efficiency and effectiveness in various natural language processing tasks, including text classification, sentiment analysis, and language identification. It has been widely adopted and has become a valuable tool for many researchers and practitioners in the field.
 
 # Experiments
 To achieve the best results, we tried different experiments in **JudgerAI** to see each experiment's effect on the final accuracy of **JudgerAI** models, here is a list of 3 experiments that were taken into consideration:
