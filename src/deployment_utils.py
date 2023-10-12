@@ -47,6 +47,7 @@ summarization_model = pipeline(
     "summarization", model="facebook/bart-large-cnn")
 
 
+# TODO: Add Docstrings
 def extract_case_information(case_content: str):
     content_list = case_content.split("\n")
     petitioner = re.findall(r"petitioner:(.+)", content_list[0])[0]
