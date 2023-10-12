@@ -57,7 +57,6 @@ def extract_case_information(case_content: str):
     return petitioner, respondent, facts
 
 
-
 def generate_random_sample() -> Tuple[str, str, str, int]:
     """
     Randomly fetch a random case from `X_test` to test it.
