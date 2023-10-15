@@ -40,7 +40,47 @@ To run JudgerAI locally, follow these steps:
 git clone https://github.com/MohammedAly22/JudgerAI
 ```
 
-2. Run the application:
+2. You need to download the **JudgerAI** trained models from the following link as they are large to upload here on GitHub:
+
+3. Create a directory called `models` inside the JudgerAI project directory and put the downloaded models inside it so the final structure of the project will be like this:
+```
+JudgerAI/
+├── csvs/
+│   ├── X_test.csv
+│   ├── X_train.csv
+│   ├── y_test.csv
+│   └── y_train.csv
+├── dataset/
+│   └── task1_data.pkl
+├── GloVe/
+│   └── glove.6B.50d.txt
+├── models/
+│   ├── best_bert_model.h5
+│   ├── best_cnn_model.h5
+│   ├── best_doc2vec_embeddings.h5
+│   ├── best_doc2vec_model.h5
+│   ├── best_fasttext_model.bin
+│   ├── best_glove_model.h5
+│   ├── best_lstm_model.h5
+│   └── best_tfidf_model.h5
+├── src/
+│   ├── deployment_utils.py
+│   ├── main.py
+│   ├── plotting.py
+│   ├── preprocessing.py
+│   ├── style.css
+│   └── utils.py
+├── BERT_experiments.ipynb
+├── cnn_experiments.ipynb
+├── doc2vec_experiments.ipynb
+├── FastText_experiments.ipynb
+├── glove_experiments.ipynb
+├── LSTM_experiments.ipynb
+├── tf_idf_experiments.ipynb
+└── voting_experiments.ipynb
+```
+
+5. Run the application:
 ```
 streamlit run src/main.py
 ```
@@ -62,7 +102,7 @@ The Dataset consists of **3464** legal cases in a variety of fields, the key fea
 The input of **JudgerAI** models will be the case `facts`, and the target will be the `winner_index`.
 
 # Modules
-For organizational purposes, we divide the code base across 5 modules: `preprocessing`, `plotting`, `utils`, `main`, and `deployment_utils.py`.
+For organizational purposes, I divided the code base across 5 modules: `preprocessing`, `plotting`, `utils`, `main`, and `deployment_utils.py`.
 
 1. [**preprocessing module**](https://github.com/MohammedAly22/JudgerAI/blob/main/src/preprocessing.py):
 `preprocessing` module contains the `Preprocessor` class which is responsible for all kinds of preprocessing on the case facts such as tokenization, converting case facts to vectors using different techniques, balancing data, anonymizing facts, preprocessing facts, etc. **balancing - anonymization - preprocessing** are covered in **Experiments** section.
@@ -142,7 +182,7 @@ Here's a high-level overview of the FastText approach:
 3. Training the Classifier: FastText trains a linear classifier (such as logistic regression or softmax) on top of the word representations to perform text classification tasks. The classifier is trained using the hierarchical softmax or the negative sampling technique.
 
 # Experiments
-To achieve the best results, we tried different experiments in **JudgerAI** to see each experiment's effect on the final accuracy of **JudgerAI** models, here is a list of 3 experiments that were taken into consideration:
+To achieve the best results, I tried different experiments in **JudgerAI** to see each experiment's effect on the final accuracy of **JudgerAI** models, here is a list of 3 experiments that were taken into consideration:
 - Data Preprocessing:
   Including removing stopwords, lowercasing all letters, stemming, and removing non-alphabet characters except the `_` letter, punctuation, and digits.
 - Data Anonymization:
@@ -165,7 +205,7 @@ Each experiment of the above 3, can be made or not, so, we ended up with 8 (2 to
 As a result, we will end up with 8 different results representing the effect of each experiment on the final model's decision.
 
 # Training
-A quick overview of the training methodology, First we divided the dataset into training and testing parts with a proportion of 80:20 and this division will be constant for all of JudgerAI's models to test all models on the same test set to make the results comparable. Therefore, the training data was divided into 4 parts or more specifically 4 folds each fold is 25% of the data that we used to train JudgerAI's models using 4-fold cross-validation. So we ended up with 4 testing accuracies representing the performance of each fold on the testing data. 
+A quick overview of the training methodology, First I divided the dataset into training and testing parts with a proportion of 80:20 and this division will be constant for all of JudgerAI's models to test all models on the same test set to make the results comparable. Therefore, the training data was divided into 4 parts or more specifically 4 folds each fold is 25% of the data that we used to train JudgerAI's models using 4-fold cross-validation. So I ended up with 4 testing accuracies representing the performance of each fold on the testing data. 
 
 Here is an illustration graph for training methodology:
 
@@ -174,7 +214,7 @@ Here is an illustration graph for training methodology:
 **An important** part to mention here is that these 4 testing accuracies will be per combination. Let me clarify this by considering the `Doc2Vec` model, first, we set up our eight combinations, then in each combination, we trained a `Doc2Vec` model with 4-fold cross-validation, so, we ended up with 32 (8 x 4) testing accuracies, then, we will choose the best combination and the best fold that can generalize well on the testing data and save it for later use.
 
 # Final Steps
-After training the above 5 models and saving the best model combination that performs well on the testing set, we have made a simple step of **ensemble learning** between models to give the most accurate prediction, and this was done by simply using **voting** between models on the winner of a specific case.
+After training the above 5 models and saving the best model combination that performs well on the testing set, I have made a simple step of **ensemble learning** between models to give the most accurate prediction, and this was done by simply using **voting** between models on the winner of a specific case.
 
 # Additional
 For a more detailed explanation of **JudgerAI** and to see the results of its models in much more detail, please, go to each model's notebook to see a detailed explanation of the powerful legal assistant "JudgerAI", Thanks.
