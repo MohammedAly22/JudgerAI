@@ -43,7 +43,7 @@ git clone https://github.com/MohammedAly22/JudgerAI
 2. You need to download the **JudgerAI** trained models from the following link as they are large to upload here on GitHub:
 
 3. Create a directory called `models` inside the JudgerAI project directory and put the downloaded models inside it so the final structure of the project will be like this:
-```
+```diff
 JudgerAI/
 ├── csvs/
 │   ├── X_test.csv
