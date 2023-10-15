@@ -80,7 +80,7 @@ JudgerAI/
 └── voting_experiments.ipynb
 ```
 
-5. Run the application:
+4. Run the application:
 ```
 streamlit run src/main.py
 ```
