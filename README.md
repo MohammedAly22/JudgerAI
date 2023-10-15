@@ -209,7 +209,8 @@ A quick overview of the training methodology, First I divided the dataset into t
 
 Here is an illustration graph for training methodology:
 
-![alt text](graph.jpg)
+![graph](https://github.com/MohammedAly22/JudgerAI/assets/90681796/f8e1fd26-8697-45d1-8cb3-439a7b14dc6c)
+
 
 **An important** part to mention here is that these 4 testing accuracies will be per combination. Let me clarify this by considering the `Doc2Vec` model, first, we set up our eight combinations, then in each combination, we trained a `Doc2Vec` model with 4-fold cross-validation, so, we ended up with 32 (8 x 4) testing accuracies, then, we will choose the best combination and the best fold that can generalize well on the testing data and save it for later use.
 
