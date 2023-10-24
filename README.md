@@ -1,4 +1,4 @@
-# JudgerAI | Your Dream's Legal AI Assistant
+ # JudgerAI | Your Dream's Legal AI Assistant
 Introducing **JudgerAI** - the revolutionary NLP application that predicts legal judgments with stunning accuracy! Say goodbye to the guesswork of legal decision-making and hello to unparalleled efficiency and precision. **JudgerAI** uses advanced natural language processing algorithms to analyze past cases, legal precedents, and relevant data to provide accurate predictions of future legal outcomes. With **JudgerAI**, legal professionals can make informed decisions, save time, and improve their success rates. Trust in the power of AI and let **JudgerAI** lead the way to a smarter, more efficient legal system.
 
 **Table of Contents:**
@@ -41,8 +41,9 @@ git clone https://github.com/MohammedAly22/JudgerAI
 ```
 
 2. You need to download the **JudgerAI** trained models from the following link as they are large to upload here on GitHub:
+   [**Download Models from Here**](https://drive.google.com/drive/folders/1ut2eQb3prHKJ1IarsKbAwCoOzOlqCt-Q?usp=sharing)
 
-3. Create a directory called `models` inside the JudgerAI project directory and put the downloaded models inside it so the final structure of the project will be like this:
+4. Create a directory called `models` inside the JudgerAI project directory and put the downloaded models inside it so the final structure of the project will be like this:
 ```diff
 JudgerAI/
 ├── csvs/
