@@ -39,11 +39,15 @@ To run JudgerAI locally, follow these steps:
 ```
 git clone https://github.com/MohammedAly22/JudgerAI
 ```
+2. Download the GloVe pre-trained embeddings from the following link:
+[**GloVe Embeddings File**](https://www.kaggle.com/datasets/adityajn105/glove6b50d)
 
-2. You need to download the **JudgerAI** trained models from the following link as they are large to upload here on GitHub:
+3. Create a directory called `GloVe` inside the JudgerAI project directory and put the downloaded `glove.6b.50d.txt` inside it
+
+4. You need to download the **JudgerAI** trained models from the following link as they are large to upload here on GitHub:
    [**Download Models from Here**](https://drive.google.com/drive/folders/1ut2eQb3prHKJ1IarsKbAwCoOzOlqCt-Q?usp=sharing)
-
-4. Create a directory called `models` inside the JudgerAI project directory and put the downloaded models inside it so the final structure of the project will be like this:
+   
+5. Create a directory called `models` inside the JudgerAI project directory and put the downloaded models inside it so the final structure of the project will be like this:
 ```diff
 JudgerAI/
 ├── csvs/
@@ -81,7 +85,7 @@ JudgerAI/
 └── voting_experiments.ipynb
 ```
 
-4. Run the application:
+6. Run the application:
 ```
 streamlit run src/main.py
 ```
