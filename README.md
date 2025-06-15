@@ -52,6 +52,7 @@ Watch **JudgerAI** in action:
    ```
 
 3️⃣ **Download pre-trained models** (heavy files) and place them in `models/`.
+[**Download Models from Here**](https://drive.google.com/drive/folders/1ut2eQb3prHKJ1IarsKbAwCoOzOlqCt-Q?usp=sharing)
 
 4️⃣ **Directory structure**:
 
